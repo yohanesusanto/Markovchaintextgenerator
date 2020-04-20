@@ -14,8 +14,8 @@ def remove_values_from_list(the_list, val):
     return [value for value in the_list if value != val]
 
 # form a single string that contains the entire novel as training data... 
-#INPUT_FILENAME = str(sys.argv[1])
-INPUT_FILENAME = 'thegreatgatsby'
+INPUT_FILENAME = str(sys.argv[1])
+#INPUT_FILENAME = 'thegreatgatsby'
 training_text = open(INPUT_FILENAME, "r").read()
 #training_text = open(INPUT_FILENAME, "r", encoding = "ISO-8859-1").read()
 
@@ -29,8 +29,8 @@ training_text = remove_values_from_list(training_text, '')
 training_text = remove_values_from_list(training_text, ' ')
 
 # the length of the generated text 
-#generated_text_length = int(sys.argv[2])+0
-generated_text_length = 200 
+generated_text_length = int(sys.argv[2])+0
+#generated_text_length = 200 
 index = 1
 chain = {}
 
@@ -61,6 +61,6 @@ OUTPUT_FILENAME = 'output.txt'
 with open(OUTPUT_FILENAME, "w") as file:
     file.write(message)
     
-#prints it to the terminal    
+#uncomment rows below to print it in the terminal    
 #output = open(OUTPUT_FILENAME,"r")
 #print(output.read())
